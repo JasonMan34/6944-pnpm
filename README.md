@@ -8,10 +8,10 @@ After calling `pnpm add -w has-symbols@1.0.0`, we will have `has-symbols@1.0.3` 
 `cd repo1 && pnpm add -w has-symbols@1.0.0`
 
 ## Expected
-Expected the `has-symbol@1.0.0` package will be installed in the root workspace, then `packages/a` will resolve `has-symbols` to the version found in the root workspace
+Expected the `has-symbol@1.0.0` package to be installed in the root workspace, and for `packages/a` to get the same version for `has-symbols` as the one found in the root workspace
 
 ## Actual
-`packages/a` will receive a `has-symbols@1.0.3`, which is what `*` matches (now that default resolution is highest match). Only afterwards will `has-symbol@1.0.0` be installed in the root workspace, having no effect on `packages/a`
+`packages/a` will get `has-symbols@1.0.3`, which is what `*` matches with no existing dep (now that default resolution is highest match). Only afterwards will `has-symbol@1.0.0` be installed in the root workspace, having no effect on `packages/a`
 
 `pnpm-lock.yaml` content after:
 ```yaml
