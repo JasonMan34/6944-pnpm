@@ -2,7 +2,7 @@
 
 In repo1, `packages/a/package.json` specifies the peerDependency: `has-symbols: '*'`
 However, at the moment, that package is not installed in the root directory or mentioned in the root `package.json`.
-After calling `pnpm add -w has-symbols@1.0.0`, we will have `has-symbols@1.0.3` as the version for `packages/a` and 
+After calling `pnpm add -w has-symbols@1.0.0`, we will have `has-symbols@1.0.3` as the version for `packages/a` and `has-symbols@1.0.0` in the root dir
 
 ## Steps
 `cd repo1 && pnpm add -w has-symbols@1.0.0`
