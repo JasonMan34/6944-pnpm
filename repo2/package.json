@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "has-symbols": "1.0.3"
+    "has-symbols": "1.0.0"
   }
 }
